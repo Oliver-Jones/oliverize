@@ -1,42 +1,218 @@
-<html>
-   <head>
-      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-      <link rel="manifest" href="favicon/site.webmanifest">
-      <link rel="stylesheet" href="styles/index.css">
-      <script src="scripts/index.js" type="text/javascript"></script>
-      <title>Oliver Jones</title>
-   </head>
-   <body>
-      <header>   
-         <h1 class="inner_header">Your Personal Blog</h1>
-         <nav>
-            <a href="domain.tld/home">Home</a>
-            <a href="domain.tld/blog">Blog</a>
-            <a href="domain.tld/about">About</a>
-         </nav>
-      </header>
-      <main>
-         <div class="row">
-            <div class=”post-text-box”>
-               <h1>Newest Post</h1>
-               <section>
-                  <h1>First Post</h1>
-                  <p>The first post’s content</p>
-               </section>
-            </div>
-            <div class=”profile”>
-               <h1>About Me</h1>
-               <img src=”profile-picture.png”>
-               <p>About the author</p>
-            </div>  
-         </div>        
-      </main>
-      <footer>
-         <a href=”twitter.com/author”>Twitter</a>
-         <a href=”facebook.com/author”>Facebook</a>
-         <a href=”instagram.com/author”>Instagram</a>
-      </footer>
-   </body>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.ico" />
+    <link rel="manifest" href="./src/favicon/site.webmanifest" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="./src/styles/output.css" rel="stylesheet" type="text/css" />
+    <script src="./src/scripts/index.js" type="text/javascript" defer></script>
+    <title>Oliverize</title>
+  </head>
+  <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+    <header class="sticky top-0 z-10 bg-lav-light dark:bg-lav-dark text-white">
+      <section class="mx-auto flex max-w-4xl p-4 justify-between items-center">
+        <h1 class="text-3xl font-medium">
+          <a href="#hero">🧑🏻‍💻OLIVERIZE</a>
+        </h1>
+        <div>
+          <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
+            <!-- &#9776; -->
+            <div
+              class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:transition-all before:duration-500 before:-translate-x-4 before:-translate-y-3 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:transition-all after:duration-500 after:-translate-x-4 after:translate-y-3"
+            ></div>
+          </button>
+          <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
+            <a href="#skills" class="hover:opacity-90">My Skills</a>
+            <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
+            <a href="#contact" class="hover:opacity-90">Contact Us</a>
+          </nav>
+        </div>
+      </section>
+      <section
+        id="mobile-menu"
+        class="absolute top-68 dark:bg-black bg-lav-white w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden"
+      >
+        <!-- <button class="text-8xl self-end px-6">&times;</button> -->
+        <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+          <a href="#hero" class="w-full text-center py-6 hover:opacity-90">Home</a>
+          <a href="#skills" class="w-full text-center py-6 hover:opacity-90">My Skills</a>
+          <a href="#testimonials" class="w-full text-center py-6 hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="w-full text-center py-6 hover:opacity-90">Contact Us</a>
+          <a href="#footer" class="w-full text-center py-6 hover:opacity-90">Legal</a>
+        </nav>
+      </section>
+    </header>
+    <main class="max-w-4xl mx-auto">
+      <section
+        id="hero"
+        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-m-40 widescreen:section-min-height tallscreen:section-min-height"
+      >
+        <article class="sm:w-1/2">
+          <h2 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
+            Designing Experiences, <span class="text-lav-light dark:text-lav-dark">Shaping Futures</span>...
+          </h2>
+          <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+            Building Salesforce Applications for the next century today. From a employee to a Professional, and beyond...
+          </p>
+          <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+            Think about me when finding solutions.
+          </p>
+        </article>
+        <img class="w-1/2" src="./src/images/boycodepc.png" alt="Coding on PC" />
+      </section>
+      <hr class="mx-auto bg-black dark:bg-white w-1/2" />
+      <section
+        id="skills" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
+        <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+          My Skills
+        </h2>
+        <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8">
+          <li
+           class="w-2/3 h-max sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <img src="./src/images/clienthandshake.png" alt="Client Handshake" class="w-1/2 mb-6 bg-white rounded-xl" />
+            <h3 class="text-3xl text-center text-slate-900 dark:text-white">Salesforce</h3>
+            <p class="hidden sm:block text-3xl text-center mt-2 text-slate-500 dark:text-slate-400">Full Stack</p>
+            <p class="sm:hidden text-2xl text-center mt-2 text-slate-500 dark:text-slate-400">Certified Application Architect</p>
+          </li>
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <img src="./src/images/clienthandshake.png" alt="Client Handshake" class="w-1/2 mb-6" />
+            <h3 class="text-3xl text-center text-slate-900 dark:text-white">Website Design</h3>
+            <p class="hidden sm:block text-3xl text-center mt-2 text-slate-500 dark:text-slate-400">HTML/JS</p>
+            <p class="sm:hidden text-2xl text-center mt-2 text-slate-500 dark:text-slate-400">HTML/JS/Tailwind</p>
+          </li>
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <img src="./src/images/clienthandshake.png" alt="Client Handshake" class="w-1/2 mb-6" />
+            <h3 class="text-3xl text-center text-slate-900 dark:text-white">Omnistudio/LWC</h3>
+            <p class="hidden sm:block text-3xl text-center mt-2 text-slate-500 dark:text-slate-400">Aura/VF</p>
+            <p class="sm:hidden text-2xl text-center mt-2 text-slate-500 dark:text-slate-400">Experience Cloud/Public Sector Cloud</p>
+          </li>
+       </ul>
+    </section>
+    <hr class="mx-auto bg-black dark:bg-white w-1/2" />
+      <section
+        id="testimonials"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
+        <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+          Testimonials
+        </h2>
+        <figure class="my-12">
+          <blockquote class="bg-lav-white dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:text-opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:text-opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              Oliver has been a <span class="italic">valued member</span> of the ICA support for many years and now the tax team. We really <span class="italic">appreciate his knowledge of the ICA system in its entirety and the ability to program the new, complex processes and troubleshoot the technical issues that come up</span>. It was <span class="italic">great to have a team member that was consistent</span> between MFCR and Tax so that the interface knowledge could be bridged between the projects. We have a <span class="italic">trust in Oliver that is very comforting.</span>
+            </p>
+          </blockquote>
+          <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-700 dark:text-slate-400">
+            &#8212;Julie Hill, ICA
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote class="bg-lav-white dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:text-opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:text-opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              Oliver in ICA project has been consistently performing well. Even in recent UAT change implementation Sprints, he handled most <span class="italic">complex stories with ease and accuracy.</span> This exhibits his technical expertise and focus on the details. Whole team is very much impressed.
+            </p>
+          </blockquote>
+          <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-700 dark:text-slate-400">
+            &#8212;Sharmeela Jayaram, Mastek
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote class="bg-lav-white dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:text-opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:text-opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              You exhibit a
+              <span class="italic">role model behavior</span>
+              for the rest of the organization to follow!
+            </p>
+          </blockquote>
+          <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-700 dark:text-slate-400">
+            &#8212;Krishnadoss Parthasarathy, Mastek
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote class="bg-lav-white dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:text-opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:text-opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              Thank you for your hard work on ICA project and helping us successfully go live 💯. You were instrumental on this project in many ways including&#8212;<br/>
+              <q class="italic">Being technically strong and supporting team</q><br/>
+              <q class="italic">Fixed complex issues within a short time with accuracy</q><br/>
+              <q class="italic">Most complex scenarios were done by you</q><br/>
+            </p>
+          </blockquote>
+          <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-700 dark:text-slate-400">
+            &#8212;Rahul Rathore, Mastek
+          </figcaption>
+        </figure>
+      </section>
+      <hr class="mx-auto bg-black dark:bg-white w-1/2" />
+      <section id="contact" class="p-6 my-12 scroll-mt-16 widescreen:section-min-height tallscreen:section-min-height">
+        <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">Contact Us</h2>
+        <form action="" class="max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4">
+          <label for="subject">Subject:</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            minlength="3"
+            maxlength="60"
+            placeholder="Your Subject"
+            class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border:none"
+          />
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border:none"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button
+            class="bg-lav-light dark:bg-lav-dark hover:bg-lav-white dark:hover:bg-lav-black active:bg-lav-dark dark:active:bg-lav-white text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer id="footer" class="bg-lav-light dark:bg-lav-dark text-white text-xl">
+      <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
+        <address>
+          <h2>Acme Rocket-Powered Products, Inc.</h2>
+          555 Astro Way<br />
+          Fairfield, New Jersey 12345-5555<br />
+          Email:<a href="mailto:inquiries@acmerockets.com">Inquiries@acmerockets.com</a><br />
+          Phone: <a href="tel:+15555555555">(555) 555-5555</a>
+        </address>
+        <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+          <a href="#skills" class="hover:opacity-90">My Skills</a>
+          <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="hover:opacity-90">Contact Us</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">Copyright &copy; <span id="year">2024</span></p>
+          <p class="text-right">All Rights Reserved</p>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
